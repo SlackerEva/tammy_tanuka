@@ -2,24 +2,14 @@ import React from 'react';
 
 function Checkbox(props) {
 
-  const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-   
-  function handleClick() {
-    setIsMenuOpen(!isMenuOpen);
-  }
-
-  function handleCardsSortASCClick() {
-    props.onLinkClick("asc");
-  }
-
-  function handleCardsSortDESCClick() {
-    props.onLinkClick("desc");
+  function handleCardsFilter(event) {
+    props.onClick(event.target.checked);
   }
 
   return (
     <div className="chekboxes">
     <label>Faivorit</label>
-    <input type="checkbox" checked />
+    <input type="checkbox" onClick={handleCardsFilter} />
   </div>
   );
 }
