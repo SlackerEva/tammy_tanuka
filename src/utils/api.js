@@ -21,7 +21,7 @@ class Api {
   }
 
   sortCards(order) {
-    return fetch(`${this._url}/list?order_by=name_${order}`, {
+    return fetch(`${this._url}/list?${order}`, {
       headers: this._headers
     })
     .then((res) => {
@@ -43,19 +43,10 @@ class Api {
         return this._getResponseData(res);
       }); 
   }
-  
-  filterFavorite() {
-    return fetch(`${this._url}/list?order_by=name_desc&favorite=yes`, {
-      headers: this._headers
-    })
-    .then((res) => {
-      return this._getResponseData(res);
-    }); 
-  }
 }
 
 const api = new Api({
-  url: "https://178a8fec-714d-49c6-b73c-16e9b461994a.mock.pstmn.io/api/v1",
+  url: "https://f864c3d3-4258-4bcf-9190-36d7e63ab58c.mock.pstmn.io/api/v1",
   headers: {
     authorization: "fb495017-080b-4391-8363-eb09bd7d470d",
     "content-type": "application/json"

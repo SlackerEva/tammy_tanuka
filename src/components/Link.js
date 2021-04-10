@@ -9,11 +9,11 @@ function Link(props) {
   }
 
   function handleCardsSortASCClick() {
-    props.onLinkClick("asc");
+    props.onClick(true);
   }
 
   function handleCardsSortDESCClick() {
-    props.onLinkClick("desc");
+    props.onClick(false);
   }
 
   return (

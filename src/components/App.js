@@ -36,7 +36,6 @@ function App() {
   function handleSortCards(order) {
     api.sortCards(order)
       .then((items) => {
-        console.log(items);
         setCards(items.results);
       })
       .catch((err)=>{
@@ -54,12 +53,12 @@ function App() {
   }
 
   return (
-      <div className="page">
-        <Header onSortCards={handleSortCards}  />
-        <Main cards={cards} onCardClick={handleCardClick} onCardLike={handleCardLike} />
-        <Footer />
-        <ImagePopup selectedCard={selectedCard} onClose={closeAllPopups} card={card} />
-      </div>
+    <div className="page">
+      <Header onSortCards={handleSortCards}  />
+      <Main cards={cards} onCardClick={handleCardClick} onCardLike={handleCardLike} />
+      <Footer />
+      <ImagePopup selectedCard={selectedCard} onClose={closeAllPopups} card={card} />
+    </div>
   );
 }
 
