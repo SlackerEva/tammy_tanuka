@@ -44,8 +44,14 @@ function App() {
   }
 
   function handleCardClick(card) {
-    setSelectedCard(true);
-    setCard(card);
+    api.getCard(card.id)
+    .then((item) => {
+      setSelectedCard(true);
+      setCard(item);
+    })
+    .catch((err)=>{
+      console.log(err);
+    });
   }
 
   function closeAllPopups() {

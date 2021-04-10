@@ -20,6 +20,15 @@ class Api {
     }); 
   }
 
+  getCard(id) {
+    return fetch(`${this._url}/object/${id}`, {
+      headers: this._headers
+    })
+    .then((res) => {
+      return this._getResponseData(res);
+    }); 
+  }
+
   sortCards(order) {
     return fetch(`${this._url}/list?${order}`, {
       headers: this._headers
