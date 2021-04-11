@@ -1,6 +1,6 @@
 .popup__content-show {
-position: relative;
-display: block;
+  position: relative;
+  display: block;
 }
 
 @media (min-width: 320px) and (max-width: 424px) {

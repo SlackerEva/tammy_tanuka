@@ -7,10 +7,10 @@ function Checkbox(props) {
   }
 
   return (
-    <div className="chekboxes">
-    <label>Faivorit</label>
-    <input type="checkbox" onClick={handleCardsFilter} />
-  </div>
+    <div className="boxes">
+      <label className="boxes__label">favorite</label>
+      <input type="checkbox" onClick={handleCardsFilter} />
+    </div>
   );
 }
 

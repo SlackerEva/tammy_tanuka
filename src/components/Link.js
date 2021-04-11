@@ -18,11 +18,11 @@ function Link(props) {
 
   return (
     <div className="menu">
-    <span onClick={handleClick}>Сортировать</span>
+    <span className="menu__title" onClick={handleClick}>sort</span>
       <div className={`menu__links ${isMenuOpen ? 'menu__links_open' : ''}`}>
         <ul>
-          <li onClick={handleCardsSortASCClick}>По алфавиту</li>
-          <li onClick={handleCardsSortDESCClick}>Не по алфавиту</li>
+          <li className="menu__link" onClick={handleCardsSortASCClick}>asc</li>
+          <li className="menu__link" onClick={handleCardsSortDESCClick}>desc</li>
         </ul>
       </div>
   </div>
