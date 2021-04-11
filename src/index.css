@@ -36,5 +36,10 @@
 
 @import url(blocks/menu/__links/menu__links.css);
 @import url(blocks/menu/__links_open/menu__links_open.css);
+@import url(blocks/menu/__link/menu__link.css);
+@import url(blocks/menu/__title/menu__title.css);
+
+@import url(blocks/search/search.css);
+@import url(blocks/boxes/__label/boxes__label.css);
 
 @import url(blocks/popup/_opened/popup_opened.css);

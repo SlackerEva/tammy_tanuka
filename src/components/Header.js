@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from './Link.js';
 import Checkbox from './Checkbox.js';
-import logo from '../images/logo.svg';
+import logo from '../images/secret.jfif';
 
 function Header(props) {
  
@@ -53,13 +53,17 @@ function Header(props) {
   return (
     <header className="header">
       <img className="logo" src={logo} alt="Логотип" />
-      <Checkbox onClick={filterCards} />
-      <input placeholder="Поиск" onChange={serachCards}/>
       <div className="navigation">
         <Link onClick={sortCards} />
       </div>
+      <Checkbox onClick={filterCards} />
+      <input className="search" type="search" placeholder="Поиск" onChange={serachCards}/>
     </header>
   );
 }
 
 export default Header;
+
+/*
+      
+*/
